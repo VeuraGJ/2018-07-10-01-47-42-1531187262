@@ -24,10 +24,15 @@ public class Add {
     }
 
     public int getSumTripleAndAddTwo(List<Integer> arrayList) {
-        throw new NotImplementedException();
+        int sumTripleAndAddTwo = 0;
+        for(Integer number:arrayList){
+            sumTripleAndAddTwo += number * 3 + 2;
+        }
+        return sumTripleAndAddTwo;
     }
 
     public List<Integer> getTripleOfOddAndAddTwo(List<Integer> arrayList) {
+
         throw new NotImplementedException();
     }
 
