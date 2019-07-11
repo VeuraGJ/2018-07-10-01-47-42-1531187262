@@ -16,19 +16,11 @@ public class Add {
 
     public int getSumOfOdds(int leftBorder, int rightBorder) {
 
-        int sum=0;
-        int temp=0;
-        if(leftBorder>rightBorder){
-            temp=leftBorder;
-            leftBorder=rightBorder;
-            rightBorder=temp;
-        }
-        for(int i= leftBorder;i<= rightBorder;i++){
-            if(i%2!=0){
-                sum+= i;
-            }
-        }
-        return sum;
+        int min = Math.min(leftBorder, rightBorder);
+        int max = Math.max(leftBorder, rightBorder);
+        return IntStream.rangeClosed(min,max)
+                .filter(number -> number%2 !=0)
+                .sum();
     }
 
     public int getSumTripleAndAddTwo(List<Integer> arrayList) {
