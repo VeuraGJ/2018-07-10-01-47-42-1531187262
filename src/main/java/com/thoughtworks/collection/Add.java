@@ -24,11 +24,7 @@ public class Add {
     }
 
     public int getSumTripleAndAddTwo(List<Integer> arrayList) {
-        int sumTripleAndAddTwo = 0;
-        for(Integer number:arrayList){
-            sumTripleAndAddTwo += number * 3 + 2;
-        }
-        return sumTripleAndAddTwo;
+        return arrayList.stream().mapToInt(number -> number * 3 + 2).sum();
     }
 
     public List<Integer> getTripleOfOddAndAddTwo(List<Integer> arrayList) {
